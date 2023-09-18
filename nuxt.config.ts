@@ -26,12 +26,15 @@ const customTheme: ThemeDefinition = {
 
 
 export default defineNuxtConfig({
-  nitro: {
-    preset: 'aws-lambda'
-  },
   modules: [
-    '@invictus.codes/nuxt-vuetify'
+    '@invictus.codes/nuxt-vuetify',
+    '@storybook-vue/nuxt-storybook'
   ],
+  storybook: {
+    url: 'http://localhost:6006',
+    storybookRoute: '/__storybook__',
+    port: 6006,
+  },
   vuetify: {
     vuetifyOptions: {
       theme: {
